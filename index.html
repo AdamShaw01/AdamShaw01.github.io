@@ -4,59 +4,87 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adam's Webpage</title>
-    <link rel="icon" href="Assets/rotating_computer.gif">
+    <title>Adam Shaw</title>
+    <link rel="icon" href="Assets/rook.png">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body background="Assets/stars01.gif">
-    <audio autoplay loop title="Donkey Kong Country - Aquatic Ambiance">
-        <source src="Assets/music.mp3" type="audio/mp3" />
-    </audio>
+    <script src="java.js"></script>
     <font color="white" style="font-family:'Courier New'">
         <div align="center">
-            <img src="Assets/planet.webp" /><img src="Assets/profile.png" width="200" height="200" /><img src="Assets/planet.webp" /><h1><u>Adam Shaw</u></h1><h3>Programming Student<br />Staffordshire University</h3>
-            <a href="https://twitter.com/AdamShaw01"><img class="logo" src="Assets/twitter.png" /></a><a href="https://www.linkedin.com/in/adam-shaw-668229226/"><img class="logo" src="Assets/linkedin.png" /></a>
-            <a href="https://github.com/AdamShaw01"><img class="logo" src="Assets/git.png" /></a><br /><br />
-            <img src='https://www.free-website-hit-counter.com/c.php?d=9&id=145045&s=39' alt='Free Website Hit Counter'><br /><br />
-            <img src="Assets/about.gif" /><br /><br />
-            <p class="base">
-                Hello, I am an undergraduate who is studying Computer Games Programming at Staffordshire University. While studying programming I have learned DirectX11, OpenGL, GitHub - for solo and team projects, as well as other
-                frameworks like SDL2. Outside of programming I spend my time playing Chess (online, at tournaments, and as a part of my university's Chess club), Minesweeper speedrunning, Skydiving, Film Photography, and playing a
-                varity of video games. The games I tend to lean towards are indie games and short experimental games that explore an idea not usually explored in the industry. I've grown up playing games; from the PS2 and the Xbox,
-                to building my PC to continue playing the weirdest asortmant of games that I can come up with. Hopefully my webpage will illustrate my passion for playing and creating video games.
-            </p><br /><br />
-            <img src="Assets/skills.gif" /><br /><br />
-            <ul class="design">
-                <li class="content">Solid understanding of C++ and C#</li>
-                <li class="content">Broad maths knowledge</li>
-                <li class="content">Confident and adaptive problem solver</li>
-                <li class="content">Excellent with the Unity engine</li>
-                <li class="content">Experienced with working as part of a team</li>
-            </ul><br />
-            <img src="Assets/projects.gif" /><br /><br />
-            <h2><u>Space Shop 3D Environment</u></h2>
-            <img class="project1" src="Assets/college3d.png" /><img class="project1" src="Assets/StoreAnimation.gif" /><br /><br />
-            <p class="base">
-                This project is a 3D environment I made in 3DS Max; with an animation to accompany it. The inspiration of this project was a mix between
-                Zathura: A Space Adventure (2005) and Job Simulator (2016). I created all of the assets for this project apart from the animation and model of the person that appears in the animation. I now focus on programming,
-                however I understand the work that goes into creating art within the industry.
-            </p><br /><br />
-            <h2><u>Twine Interactive Story</u></h2>
-            <img src="Assets/ots.PNG" width="550" height="250" /><br /><br />
-            <p class="base">
-                This project is an interactive story inspired by the old adventure books "Choose your own adventure" which I loved reading growing up. This game was created in Twine and I encorporated HTML and CSS to
-                create a story about being tasked to travel to Severodvinsk to fight for Russia (this was created before the Russian Ukrainian war).<br /><br />Click Enter below to play the game.
+            <h1 class="title">Adam Shaw</h1><img class="profile" src="Assets/profile.png" /><h2 class="spacing">Programming Student<br />Staffordshire University</h2>
+            <a href="https://twitter.com/AdamShaw01" target="_blank" rel="noopener noreferrer"><img class="logo" src="Assets/twitter.png" /></a>
+            <a href="https://www.linkedin.com/in/adam-shaw-668229226/" target="_blank" rel="noopener noreferrer"><img class="logo" src="Assets/linkedin.png" /></a>
+            <a href="https://github.com/AdamShaw01" target="_blank" rel="noopener noreferrer"><img class="logo" src="Assets/git.png" /></a>
+            <p class="intro">
+                Hello and welcome, I am a programmer with a passion for creating and playing video games of varying genres. Outside of programming I enjoy playing chess, as well as being
+                a member of my university's Chess Club.
             </p>
-            <a href="Onward to Severodvinsk.html"><img src="Assets/enter.webp" /></a>
-            <h2><u>OpenGL Environment</u></h2>
-            <img class="project1" src="Assets/opengl.gif" /><br /><br />
-            <p class="base">
-                I learned a lot from this project as it was my first with OpenGL. 
-            </p><br /><br />
+            <button class="button" onclick="load(0)">Projects</button>
+            <button class="button" onclick="load(1)">Career</button>
+            <button class="button" onclick="load(2)">Skills</button>
+
+            <div id="projects" style="display:none">
+                <img class="projectlogo" src="Assets/SpiritTale.png" onclick="project(0)" />
+                <img class="projectlogo" src="Assets/storeLogo.jpg" onclick="project(1)" />
+                <img class="projectlogo" src="Assets/directx.jpg" onclick="project(2)" />
+
+                <div id="project1" style="display:none">
+                    <div class="border">
+                        <h2><u>A Spirit's Tale</u></h2><p class="base">
+                            This was a six person group project that spanned six weeks. A Spirit's Tale is a platformer puzzle game with stealth elements. The areas I worked on were the level design,
+                            death and respawn mechanics, level transitions, and the player's' attack.<br />
+                            Working as part of a team for six weeks made me understand how to collaborate better and using GitHub with multiple collaboraters.
+                        </p><br /><br />
+                        <iframe width="500" height="360" src="https://www.youtube.com/embed/v-Ub6PRxSMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div id="project2" style="display:none">
+                    <div class="border">
+                        <h2><u>Space Shop 3D Environment</u></h2><img class="project" src="Assets/college3d.png" /><br /><br /><p class="base">
+                            This project is a 3D environment I made in 3DS Max; with an animation to accompany it. The inspiration of this project was a mix between
+                            Zathura: A Space Adventure (2005) and Job Simulator (2016). I created all of the assets for this project apart from the animation and model of the person that appears in the animation. I now focus on programming,
+                            however I understand the work that goes into creating art within the industry.
+                        </p><br /><br />
+                        <img class="project" src="Assets/StoreAnimation.gif" />
+                    </div>
+                </div>
+                <div id="project3" style="display:none">
+                    <div class="border">
+                        <h2><u>DirectX Environment</u></h2><img class="project" src="Assets/directx.gif" /><br /><br /><p class="base">
+                            This project is a 3D Environment created with DirectX11. It showcases phong lighting, file read objects, texturing, transparency and cameras.
+                            I also used object oriented programming for this project.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="skills" style="display:none">
+                <ul class="design">
+                    <li class="content">Solid understanding of C++ and C#</li>
+                    <li class="content">Broad maths knowledge</li>
+                    <li class="content">Confident and adaptive problem solver</li>
+                    <li class="content">Excellent with the Unity engine</li>
+                    <li class="content">Experienced with working as part of a team</li>
+                    <li class="content">Solid HTML knowledge</li>
+                </ul>
+            </div>
+            <div id="career" style="display:none">
+                <div class="border">
+                    <h2><u>Staffordshire University</u><br />2021 - Present</h2><br /><p class="base">
+                        I am currently in the second year of studying a degree in computer games programming.
+                        <br /><br />
+                    </p>
+                    <h2><u>Future Skills - Salford City College</u><br />2019 - 2021</h2><br /><p class="base">
+                        I studied Games Design for two years and achieved three distinction stars.
+                        <br /><br />
+                    </p>
+                    <h2><u>The Nurture Group - Gavin Jones</u><br />2018 Summer</h2><br /><p class="base">
+                        I worked as a yard man full time doing small jobs around the yard, mainly watering plants due to the heatwave.
+                        <br /><br />
+                    </p>
+                </div>
+            </div>
         </div>
-        <a href="fish/index2.html"><img src="Assets/fish.webp" /></a><br/>
-        <div align="center"><img src="Assets/construction.gif" /></div>
     </font>
-    <img src="Assets/HypnoSpace.webp" width="120" height="40"/><img src="Assets/GeocityBanner.png" width="120" height="40" />
 </body>
 </html>
