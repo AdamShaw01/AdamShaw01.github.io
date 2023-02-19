@@ -25,19 +25,29 @@ function project(_num) {
     var project1 = document.getElementById("project1");
     var project2 = document.getElementById("project2");
     var project3 = document.getElementById("project3");
+    var project4 = document.getElementById("project4");
     if (_num == 0) {
         project1.style.display = "block";
         project2.style.display = "none";
         project3.style.display = "none";
+        project4.style.display = "none";
     }
     if (_num == 1) {
         project2.style.display = "block";
         project3.style.display = "none";
         project1.style.display = "none";
+        project4.style.display = "none";
     }
     if (_num == 2) {
         project3.style.display = "block";
         project2.style.display = "none";
         project1.style.display = "none";
+        project4.style.display = "none";
+    }
+    if (_num == 3) {
+        project4.style.display = "block";
+        project2.style.display = "none";
+        project1.style.display = "none";
+        project3.style.display = "none";
     }
 }
