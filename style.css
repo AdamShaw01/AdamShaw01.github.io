@@ -82,15 +82,6 @@ img.projectlogo:hover{
     transition: 0.2s;
 }
 
-img.banner {
-    margin: 0px 15px 0px 15px;
-}
-
-img.banner:hover {
-    opacity: 0.3;
-    cursor: pointer;
-}
-
 img.project {
     width: 500px;
     height: 360px;
