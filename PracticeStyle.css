@@ -1,0 +1,16 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #e2e1a8;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    background-color: #e2e1a8;
+}
